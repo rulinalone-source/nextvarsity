@@ -1,112 +1,21 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NextVarsity - ভর্তি ও চাকরির প্রস্তুতি</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#f5f7f3;--green:#006a4e;--red:#d62839;--amber:#c98a00;--ink:#10231c;--muted:#5b6b64}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;color:var(--ink);background:var(--bg);min-height:100vh;display:flex;flex-direction:column;position:relative;overflow-x:hidden}
-/* background symbols */
-.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bg svg{position:absolute;fill:none;stroke:var(--green);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.16}
-.bg svg.r{stroke:var(--red);opacity:.14}
-main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 18px;position:relative;z-index:1}
-.wrap{max-width:1100px;width:100%;display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
-h1{font-family:Outfit,"Hind Siliguri",sans-serif;font-size:clamp(2.6rem,7vw,6rem);font-weight:900;line-height:1;letter-spacing:-.04em;margin:0 0 18px;color:var(--green)}
-h1 span{color:var(--red)}
-.lead{font-size:clamp(.85rem,1.8vw,1.1rem);line-height:1.75;color:var(--muted);max-width:420px;margin:0 0 22px}
-.facts{display:flex;flex-wrap:wrap;gap:8px}
-.facts span{font-size:clamp(.72rem,1.4vw,.85rem);font-weight:600;color:var(--green);background:#fff;border:1px solid #cfdcd5;padding:5px 12px;border-radius:3px}
-.grid{display:flex;flex-direction:column;gap:14px}
-.opt{--c:var(--green);display:flex;flex-direction:row;align-items:center;gap:16px;background:#fff;color:var(--ink);text-decoration:none;
- border:1px solid #d6e0da;border-left:6px solid var(--c);border-radius:4px;padding:clamp(12px,2vw,18px);box-shadow:0 2px 0 rgba(16,35,28,.06);transition:background .2s,color .2s,transform .2s}
-.opt:nth-child(2){--c:var(--red)}
-.opt:nth-child(3){--c:var(--amber)}
-.opt:hover,.opt:focus-visible{background:var(--c);color:#fff;transform:translateX(-6px);outline:none}
-.opt:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.top{display:contents}
-.txt{order:2;flex:1;min-width:0}
-.go{order:3;flex:0 0 22px}
-.ic{flex:0 0 auto;order:1;width:clamp(40px,5vw,52px);height:clamp(40px,5vw,52px);border-radius:3px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c);transition:.2s}
-.ic svg{width:58%;height:58%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.go{width:22px;height:22px;color:#94a3a0;transition:.2s}
-.go svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.opt:hover .ic{background:rgba(255,255,255,.2);color:#fff}
-.opt:hover .go{color:#fff;transform:translateX(3px)}
-.txt b{display:block;font-size:clamp(.85rem,1.6vw,1.05rem);font-weight:700;line-height:1.35}
-.txt small{display:block;font-size:clamp(.7rem,1.2vw,.8rem);color:var(--muted);margin-top:4px;line-height:1.4;transition:.2s}
-.opt:hover .txt small{color:rgba(255,255,255,.88)}
-footer{position:relative;z-index:1;text-align:center;font-size:.78rem;color:var(--muted);padding:14px}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.left,.opt{animation:rise .6s ease both}
-.opt:nth-child(2){animation-delay:.12s}.opt:nth-child(3){animation-delay:.24s}
-@media(prefers-reduced-motion:reduce){.left,.opt{animation:none}.opt,.ic,.go{transition:none}}
-@media(max-width:900px){
- .wrap{grid-template-columns:1fr;gap:28px;text-align:center}
- .lead{margin:0 auto 18px;font-size:.95rem}.facts{justify-content:center}
- h1{font-size:clamp(2.6rem,13vw,5.5rem)}.opt{text-align:left}.opt:hover{transform:none}
- .grid{max-width:560px;width:100%;margin:0 auto}
-}
-</style>
-</head>
-<body>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="minar" viewBox="0 0 64 64"><circle cx="32" cy="24" r="10"/><path d="M6 58h52M12 58V34l8-6v30M52 58V34l-8-6v30M22 58V26l6-6v38M42 58V26l-6-6v38"/></symbol>
-    <symbol id="flag" viewBox="0 0 64 64"><path d="M10 6v54M10 12h44v28H10z"/><circle cx="31" cy="26" r="8"/></symbol>
-    <symbol id="shapla" viewBox="0 0 64 64"><path d="M32 44C26 34 26 22 32 12c6 10 6 22 0 32zM32 44C22 40 14 30 14 22c10 2 18 10 18 22zM32 44c10-4 18-14 18-22-10 2-18 10-18 22zM32 46C18 46 8 38 6 32c10-2 20 2 26 14zM32 46c14 0 24-8 26-14-10-2-20 2-26 14zM8 54h48"/></symbol>
-    <symbol id="fish" viewBox="0 0 64 64"><path d="M6 32c10-14 30-14 42 0-12 14-32 14-42 0zM48 32l12-10v20zM24 24c3 5 3 11 0 16M30 21l4-5 4 6"/><circle cx="16" cy="30" r="1.6"/></symbol>
-    <symbol id="boat" viewBox="0 0 64 64"><path d="M6 42h52c-4 10-12 14-26 14S10 52 6 42zM32 42V8M32 10c12 6 18 16 18 30H32zM30 14C20 20 14 28 14 40h16z"/></symbol>
-    <symbol id="rickshaw" viewBox="0 0 64 64"><circle cx="16" cy="48" r="10"/><circle cx="50" cy="48" r="10"/><path d="M26 40h22V24C38 24 28 28 26 40zM26 40l-6 8M48 40l2 8M16 48h34"/></symbol>
-    <symbol id="paddy" viewBox="0 0 64 64"><path d="M32 60V16M32 20c-6-2-8-8-8-8s6 0 8 8zM32 20c6-2 8-8 8-8s-6 0-8 8zM32 32c-6-2-8-8-8-8s6 0 8 8zM32 32c6-2 8-8 8-8s-6 0-8 8zM32 44c-6-2-8-8-8-8s6 0 8 8zM32 44c6-2 8-8 8-8s-6 0-8 8z"/></symbol>
-  </defs>
-</svg>
-
-<div class="bg" aria-hidden="true">
-  <svg style="top:4%;left:3%;width:120px;height:120px;transform:rotate(-8deg)"><use href="#minar"/></svg>
-  <svg class="r" style="top:6%;left:42%;width:90px;height:90px;transform:rotate(10deg)"><use href="#flag"/></svg>
-  <svg style="top:3%;right:5%;width:110px;height:110px;transform:rotate(6deg)"><use href="#shapla"/></svg>
-  <svg class="r" style="top:34%;left:1%;width:84px;height:84px;transform:rotate(-12deg)"><use href="#fish"/></svg>
-  <svg style="top:44%;left:40%;width:100px;height:100px;transform:rotate(8deg)"><use href="#paddy"/></svg>
-  <svg style="top:36%;right:1%;width:96px;height:96px;transform:rotate(-6deg)"><use href="#boat"/></svg>
-  <svg class="r" style="bottom:6%;left:6%;width:110px;height:110px;transform:rotate(5deg)"><use href="#rickshaw"/></svg>
-  <svg style="bottom:4%;left:36%;width:100px;height:100px;transform:rotate(-10deg)"><use href="#shapla"/></svg>
-  <svg style="bottom:5%;right:6%;width:120px;height:120px;transform:rotate(7deg)"><use href="#minar"/></svg>
-  <svg class="r" style="bottom:30%;right:30%;width:76px;height:76px;transform:rotate(-14deg)"><use href="#fish"/></svg>
-  <svg style="top:60%;left:20%;width:70px;height:70px;transform:rotate(12deg)"><use href="#paddy"/></svg>
-  <svg class="r" style="top:18%;right:28%;width:70px;height:70px;transform:rotate(-8deg)"><use href="#boat"/></svg>
-</div>
-
-<main>
-  <div class="wrap">
-    <div class="left">
-      <h1>Next<span>Varsity</span></h1>
-      <p class="lead">ভর্তি পরীক্ষা ও চাকরির প্রস্তুতির জন্য আপনার নির্ভরযোগ্য সঙ্গী। তথ্য খুঁজুন, প্র্যাকটিস করুন, এগিয়ে থাকুন।</p>
-      <div class="facts"><span>৫০+ বিশ্ববিদ্যালয়</span><span>মডেল টেস্ট</span><span>বিসিএস প্রস্তুতি</span></div>
-    </div>
-    <div class="grid">
-      <a class="opt" href="https://nextvarsity.blogspot.com/">
-        <div class="top"><span class="ic"><svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><span class="go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-        <div class="txt"><b>বাংলাদেশের বিশ্ববিদ্যালয় সমূহের ভর্তি তথ্য</b><small>র‍্যাংক, বিষয়, তুলনা ও বিস্তারিত</small></div>
-      </a>
-      <a class="opt" href="mcq.html">
-        <div class="top"><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 1.5 1.5L12 8M8 15l1.5 1.5L12 14M14 9.5h3M14 15.5h3"/></svg></span><span class="go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-        <div class="txt"><b>Admission MCQ Test</b><small>ভর্তি পরীক্ষার মডেল টেস্ট ও প্র্যাকটিস</small></div>
-      </a>
-      <a class="opt" href="bcs.html">
-        <div class="top"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><span class="go"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
-        <div class="txt"><b>BCS Preparation</b><small>বিসিএস প্রস্তুতি, নোট ও প্রশ্নব্যাংক</small></div>
-      </a>
-    </div>
-  </div>
-</main>
-<footer>&copy; 2026 NextVarsity</footer>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextVarsity - Dhaka University MCQ Exam Portal</title>
+    <meta name="description" content="Dhaka University Science Unit MCQ Exam Simulator with custom subject selection, 20-minute timer, negative marking, and official DU result card." />
+    <meta property="og:title" content="NextVarsity - Dhaka University MCQ Exam Portal" />
+    <meta property="og:description" content="Dhaka University Science Unit MCQ Exam Simulator with custom subject selection, 20-minute timer, negative marking, and official DU result card." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
+
